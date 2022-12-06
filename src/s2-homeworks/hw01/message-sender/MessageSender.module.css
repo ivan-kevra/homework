@@ -1,12 +1,12 @@
 .sendForm {
     display: flex;
     justify-content: space-evenly;
+
 }
 
 .textarea {
-    justify-content: space-evenly;
+    width: 976px;
     height: 40px;
-
     border-radius: 20px;
     background: #F5F7FB;
 }
