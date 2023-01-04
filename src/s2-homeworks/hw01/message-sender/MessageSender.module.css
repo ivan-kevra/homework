@@ -5,11 +5,14 @@
 }
 
 .textarea {
+    resize: none;
+    overflow: hidden;
     width: 976px;
-    height: 40px;
     border-radius: 20px;
     background: #F5F7FB;
+    padding: 10px 6px;
 }
+
 
 .button {
     width: 120px;
