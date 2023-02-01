@@ -2,13 +2,16 @@
 }
 
 .input {
+    width: 370px;
+    height: 36px;
 }
 
 .inputWrapper {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .superInput {
-
 }
 
 .errorInput {
@@ -16,7 +19,6 @@
 }
 
 .errorInput:focus {
-
 }
 
 .error {

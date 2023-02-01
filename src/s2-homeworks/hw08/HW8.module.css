@@ -5,19 +5,42 @@
 }
 
 .users {
+    width: 606px;
+    height: 36px;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
 }
 
 .container {
+
 }
 
 .thead {
+    background: #E5E5E5;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .nameCol {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .ageCol {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
 }

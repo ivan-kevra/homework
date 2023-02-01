@@ -24,6 +24,7 @@ const Stand = () => {
                 {/*инпут с ошибкой:*/}
                 <div>
                     <SuperInputText
+
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
                         onChangeText={setValue}
@@ -82,7 +83,7 @@ const Stand = () => {
                         checked={stateForAllCheckboxes}
                         onChangeChecked={setChecked}
                     >
-                        some text
+                        Hometask
                     </SuperCheckbox>
                 </div>
                 {/*совместим со старым кодом:*/}
