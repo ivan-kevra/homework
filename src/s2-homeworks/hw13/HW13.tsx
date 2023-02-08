@@ -8,6 +8,7 @@ import error400 from './images/400.svg'
 import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
 
+
 /*
 * 1 - дописать функцию send
 * 2 - дизэйблить кнопки пока идёт запрос
@@ -37,11 +38,24 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
+                setInfo(res.data.info)
+                setText(res.data.errorText)
 
             })
-            .catch((e) => {
-                // дописать
 
+            .catch((e) => {
+                if (e.response.status) {
+                    setCode(`Ошибка ${e.response.status}!!`)
+                    setImage(e.response.status === 500 ? error500 : error400)
+                    setInfo(e.response.data.info)
+                    setText(e.response.data.errorText)
+
+                } else {
+                    setImage(errorUnknown)
+                    setCode('Error')
+                    setInfo(e.name)
+                    setText(e.message)
+                }
             })
     }
 
@@ -56,6 +70,8 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === "...loading"}
+
 
                     >
                         Send true
@@ -65,6 +81,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === "...loading"}
 
                     >
                         Send false
@@ -74,6 +91,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === "...loading"}
 
                     >
                         Send undefined
@@ -83,6 +101,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
+                        disabled={info === "...loading"}
 
                     >
                         Send null
