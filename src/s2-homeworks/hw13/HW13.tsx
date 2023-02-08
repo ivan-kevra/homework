@@ -46,7 +46,7 @@ const HW13 = () => {
     }
 
     return (
-        <div id={'hw13'}>
+        <div id={'hw13'} className={s2.hwContainer}>
             <div className={s2.hwTitle}>Homework #13</div>
 
             <div className={s2.hw}>
