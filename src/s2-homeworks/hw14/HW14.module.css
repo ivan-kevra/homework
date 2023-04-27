@@ -1,7 +1,20 @@
 .tech {
+    display: flex;
 
 }
 
 .loading {
 
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 57%;
+
+}
+
+.entering {
+    border: 2px solid blue;
+    width: 1200px;
 }

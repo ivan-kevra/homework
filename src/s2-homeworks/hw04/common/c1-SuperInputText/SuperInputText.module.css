@@ -1,9 +1,12 @@
 .input:focus {
+
 }
 
 .input {
     width: 370px;
     height: 36px;
+
+
 }
 
 .inputWrapper {
@@ -12,6 +15,7 @@
 }
 
 .superInput {
+
 }
 
 .errorInput {
@@ -23,4 +27,9 @@
 
 .error {
     color: #CC1439;
+}
+
+
+.blueBorder {    border: 2px solid blue;
+
 }

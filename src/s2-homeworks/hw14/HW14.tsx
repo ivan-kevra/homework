@@ -38,6 +38,7 @@ const HW14 = () => {
                 // сохранить пришедшие данные
                 if (res) {
                     setTechs(res.data.techs)
+                    setLoading(false)
                 }
                 //
             })
@@ -49,7 +50,7 @@ const HW14 = () => {
 
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
+        setSearchParams(searchParams)
         //
     }
 
@@ -66,7 +67,7 @@ const HW14 = () => {
     ))
 
     return (
-        <div id={'hw14'}>
+        <div id={'hw14'} className={s2.hwContainer}>
             <div className={s2.hwTitle}>Homework #14</div>
 
             <div className={s2.hw}>
@@ -76,12 +77,14 @@ const HW14 = () => {
                     onChangeText={onChangeText}
                     onDebouncedChange={sendQuery}
                 />
-
-                <div id={'hw14-loading'} className={s.loading}>
-                    {isLoading ? '...ищем' : <br/>}
+                <div className={s.content}>
+                    <div>
+                        {mappedTechs}
+                    </div>
+                    {<div id={'hw14-loading'} className={s.loading}>
+                        {isLoading ? '...ищем' : <br/>}
+                    </div>}
                 </div>
-
-                {mappedTechs}
             </div>
         </div>
     )
